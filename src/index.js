@@ -35,4 +35,4 @@ contactButton.addEventListener(`click`, () => {
     createContactPage();
 });
 
-createContactPage();
+createHomePage();
