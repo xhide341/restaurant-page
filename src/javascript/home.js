@@ -1,4 +1,4 @@
-import matchaLogo from '../images/matcha_image.png';
+import matchaImage from '../images/matcha_image.webp';
 import matchaMascot from '../images/matcha_mascot.webp';
 import '../css/style.css';
 
@@ -10,7 +10,7 @@ const createHomePage = () => {
 
     // add matcha image
     const matcha_image = new Image();
-    matcha_image.src = matchaLogo;
+    matcha_image.src = matchaImage;
     matcha_image.height = 300;
     matcha_image.width = 300;
     matcha_image.classList.add(`matcha-image`);
@@ -25,7 +25,7 @@ const createHomePage = () => {
     homePage.appendChild(matcha_mascot);
 
     // add text
-    const homeHeading = document.createElement(`div`);
+    const headingContainer = document.createElement(`div`);
     const mainHeading = document.createElement(`h1`);
     const mainHeadingSpan = document.createElement(`span`);
     const br = document.createElement(`br`);
@@ -34,7 +34,7 @@ const createHomePage = () => {
     const footer = document.createElement(`footer`);
     const footerSpan = document.createElement(`span`);
 
-    homeHeading.classList.add(`home-heading`);
+    headingContainer.classList.add(`heading-container`);
     mainHeading.classList.add(`main-heading`);
 
     mainHeading.innerText = `Welcome to `;
@@ -48,11 +48,11 @@ const createHomePage = () => {
     footer.appendChild(footerSpan);
     
 
-    homeHeading.appendChild(mainHeading);
-    homeHeading.appendChild(subHeading);
-    homeHeading.appendChild(subText);
+    headingContainer.appendChild(mainHeading);
+    headingContainer.appendChild(subHeading);
+    headingContainer.appendChild(subText);
     
-    homePage.appendChild(homeHeading);
+    homePage.appendChild(headingContainer);
 
     content.appendChild(homePage);
     content.appendChild(footer);

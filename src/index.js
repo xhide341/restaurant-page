@@ -1,5 +1,7 @@
 import createHomePage from './javascript/home';
 import createMenuPage from './javascript/menu';
+import createAboutPage from './javascript/about';
+import createContactPage from './javascript/contact';
 import './css/style.css';
 
 
@@ -13,8 +15,6 @@ function clearContent() {
     contentContainer.innerHTML = '';
 }
 
-createMenuPage();
-
 homeButton.addEventListener(`click`, () => {
     clearContent();
     createHomePage();
@@ -26,9 +26,13 @@ menuButton.addEventListener(`click`, () => {
 });
 
 aboutButton.addEventListener(`click`, () => {
-    console.log(`About button clicked`);
+    clearContent();
+    createAboutPage();
 });
 
 contactButton.addEventListener(`click`, () => {
-    console.log(`Contact button clicked`);
+    clearContent();
+    createContactPage();
 });
+
+createContactPage();
